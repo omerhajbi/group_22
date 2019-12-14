@@ -1,18 +1,21 @@
+#ifndef PERSON_H
+#define PERSON_H
 #include <string>
 #include <iostream>
-
+using namespace std;
 class Person {
-private:
-	std::string name;
+protected:
+	string name;
 	long id;
 	int age;
 public:
 	Person() {};
-	Person(std::string name1, long id1, int age1);
+	Person(string name1, long id1, int age1);
 	Person(const Person& p);
 	~Person() {};
-	std::string get_name()const { return name; };
+	string get_name()const { return name; };
 	long get_id()const { return id; };
 	int get_age()const { return age; };
-	void print()const { std::cout << name; }
+	void print()const { cout << "name: "<< name <<"\nid: "<< id << "\nage: "<< age<< endl; }
 };
+#endif
