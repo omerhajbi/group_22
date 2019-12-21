@@ -8,7 +8,7 @@ using namespace std;
 
 class Employee : public Person {
 protected:
-	const float salary;
+	float salary;
 public:
 	Employee() {};
 	Employee(string, long, int, float);
