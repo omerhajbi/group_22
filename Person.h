@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PERSON_H
 #define PERSON_H
 #include <string>
@@ -9,13 +10,13 @@ protected:
 	long id;
 	int age;
 public:
-	Person() {};
+	Person():name(""), id(0), age(0) {};
 	Person(string name1, long id1, int age1);
 	Person(const Person& p);
 	~Person() {};
 	string get_name()const { return name; };
 	long get_id()const { return id; };
 	int get_age()const { return age; };
-	void print()const { cout << "name: "<< name <<"\nid: "<< id << "\nage: "<< age<< endl; }
+	virtual void Print()const;
 };
 #endif
