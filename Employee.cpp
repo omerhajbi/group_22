@@ -8,3 +8,4 @@ void Employee::Print() const
 	cout << "The salary is : " << salary << endl ;
 }
 
+
