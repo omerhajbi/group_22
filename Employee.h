@@ -1,3 +1,4 @@
+#pragma once
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
@@ -6,15 +7,17 @@
 #include <string>
 using namespace std;
 
-class Employee : public Person {
+class Employee : public virtual Person {
 protected:
 	float salary;
 public:
-	Employee() {};
+	Employee(): salary(0) {};
+	Employee(float s) : salary(s) {};
 	Employee(string, long, int, float);
+	Employee(const Employee&);
 	~Employee() {};
-	int get_salary()const { return salary; };
-	void Print()const;
+	float get_salary()const { return salary; };
+	void Print()const override;
 	void Print1() const { cout << salary; }
 };
 #endif
